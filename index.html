@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UML Test</title>
+    <style>
+        * {
+            font-weight: bold;
+            font-family: 'Times New Roman';
+        }
+        .head_col {
+            display: inline-block;
+            text-align: left;
+        }
+        .head_col div {
+            margin: 8px 6px;
+        }
+        .que_body {
+            margin-left: 13px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Unified Modeling Language Theory Test</h1>
+        <!-- 为了和PDF一致的对齐，分列进行布局 -->
+        <div>
+            <div class="head_col">
+                <div>Test Subject：</div>
+                <div>Class：</div>
+            </div>
+            <div class="head_col">
+                <div>Unified Modeling Language</div>
+                <div>
+                    <input type="text" name="className">
+                </div>
+            </div>
+            <div class="head_col">
+                <div>Time：</div>
+                <div>Student ID：</div>
+            </div>
+            <div class="head_col">
+                <div>100 minute</div>
+                <div>
+                    <input type="text" name="studentId">
+                </div>
+            </div>
+            <div class="head_col">
+                <div>Score：</div>
+                <div>Name：</div>
+            </div>
+            <div class="head_col">
+                <div>100</div>
+                <div>
+                    <input type="text" name="studentName">
+                </div>
+            </div>
+        </div>
+        <div class="question_box">
+            <h2>1、Fill in the blanks(5 points per space,20 points total)</h2>
+            <div class="que_body">
+                <div>
+                    1.The full name if UML in Chinese is:
+                    <input type="text" name="1-1">
+                </div>
+                <div style="margin-top: 4px;">
+                    2.The most prominent feature of the object is:
+                    <input type="text" name="1-2-1">
+                    <input type="text" name="1-2-2">
+                    <input type="text" name="1-2-3">
+                </div>
+            </div>
+        </div>
+        <div class="question_box">
+            <h2>2、Multiple choice question(10 points per space,20 points total)</h2>
+            <div class="que_body">
+                <p>1.The relationship between UML and software engineering is:</p>
+                <input type="radio" name="2-1" value="A">
+                <span>(A)UML is software engineering</span>
+                <br>
+                <input type="radio" name="2-1" value="B">
+                <span>(B)UML participates in several stages of the software development process in software engineering</span>
+                <br>
+                <input type="radio" name="2-1" value="C">
+                <span>(C)UML has nothing to do with software engineering</span>
+                <br>
+                <input type="radio" name="2-1" value="D">
+                <span>(D)UML is part of software engineering</span>
+            </div>
+            <div class="que_body">
+                <p>2.Java language support:</p>
+                <input type="radio" name="2-2" value="A">
+                <span>(A)Single inheritance</span>
+                <br>
+                <input type="radio" name="2-2" value="B">
+                <span>(B)Multiple inheritance</span>
+                <br>
+                <input type="radio" name="2-2" value="C">
+                <span>(C)Single inheritance and multiple inheritance support</span>
+                <br>
+                <input type="radio" name="2-2" value="D">
+                <span>(D)Single inheritance and multiple inheritance are not supported</span>
+            </div>
+        </div>
+        <div class="question_box">
+            <h2>3、Multiple choice(10 points per space,20 points total)</h2>
+            <div class="que_body">
+                <p>1.The granularity of the use case is divided into the following three:</p>
+                <input type="checkbox" name="3-1" value="A">
+                <span>(A)Overview level</span>
+                <br>
+                <input type="checkbox" name="3-1" value="B">
+                <span>(B)Demand level</span>
+                <br>
+                <input type="checkbox" name="3-1" value="C">
+                <span>(C)User target level</span>
+                <br>
+                <input type="checkbox" name="3-1" value="D">
+                <span>(D)Sub-function level</span>
+            </div>
+            <div class="que_body">
+                <p>2.The class diagram consists of which of the following three parts:</p>
+                <input type="checkbox" name="3-2" value="A">
+                <span>(A)Name</span>
+                <br>
+                <input type="checkbox" name="3-2" value="B">
+                <span>(B)Attribute</span>
+                <br>
+                <input type="checkbox" name="3-2" value="C">
+                <span>(C)Operation</span>
+                <br>
+                <input type="checkbox" name="3-2" value="D">
+                <span>(D)Function</span>
+            </div>
+        </div>
+        <div class="question_box">
+            <h2>4、True or False(10 points per space,20 points total)</h2>
+            <div class="que_body">
+                <div>
+                    1.Use case diagrams are only used to communicate and communicate with customers to determine demand.
+                    <input type="radio" name="4-1" value="T">√
+                    <input type="radio" name="4-1" value="F">×
+                </div>
+                <div>
+                    2.In the state diagram,the termunation state allows any number of multiples in a state diagram.
+                    <input type="radio" name="4-2" value="T">√
+                    <input type="radio" name="4-2" value="F">×
+                </div>
+            </div>
+        </div>
+        <div class="question_box">
+            <h2>5、Short answer question(20 points per space,20 points total)</h2>
+            <div class="que_body">
+                1.Briefly describe what the model is and how it behaves?
+                <br>
+                <br>
+                <textarea name="5-1" cols="90" rows="10"></textarea>
+            </div>
+        </div>
+        <button id="submitForm" type="submit" style="margin: 9px 0">Calculating score</button>
+    </form>
+    <div id="result"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="config.js"></script>
+    <script src="calculateScore.js"></script>
+</body>
+</html>
